@@ -37,6 +37,8 @@ public class JornadaService {
 
     @Transactional
     public JornadaTrabalho updateJornada(JornadaTrabalho obj){
+        //lança uma exceção se não encontrar
+        findById(obj.getId());
         return jornadaRepository.save(obj);
     }
 

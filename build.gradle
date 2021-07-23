@@ -27,6 +27,13 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	runtimeOnly 'com.h2database:h2'
+
+	implementation group: 'org.hibernate', name: 'hibernate-envers', version: '5.5.4.Final'
+	implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.2.0.Final'
+
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-bean-validators', version: '2.9.2'
 }
 
 test {

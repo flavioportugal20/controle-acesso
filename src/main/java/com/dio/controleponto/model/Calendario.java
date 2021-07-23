@@ -2,9 +2,7 @@ package com.dio.controleponto.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
@@ -17,6 +15,7 @@ import java.time.LocalDateTime;
 public class Calendario {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
     private TipoData tipo;
